@@ -1,0 +1,23 @@
+登陆前需要在主程序根目录下按照示例创建一个DBinformation.txt文件储存数据库连接信息
+
+示例
+-----------------------------------------
+driver=oracle.jdbc.driver.OracleDriver
+url=jdbc:oracle:thin:@192.168.56.1:1521:xe
+username=your username
+password=your password
+-----------------------------------------
+
+并且还需在数据库中写入:
+create table s(
+  sno varchar2(4) not null primary key,
+  sname varchar2(10),
+  sex char(3),
+  age int ,
+  pic blob
+);
+
+create table p(
+  username varchar2(10) not null primary key,
+  password varchar2(10) not null
+);
